@@ -1,1 +1,3 @@
-# AyP1-CUDI-ejercicios-resueltos
+# AyP1-ejercicios-resueltos
+
+Ejercicios resueltos en clase.
