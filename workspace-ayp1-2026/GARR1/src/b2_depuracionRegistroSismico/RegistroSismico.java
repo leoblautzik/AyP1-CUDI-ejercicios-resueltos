@@ -18,8 +18,8 @@ public class RegistroSismico {
 		for (int lectura : lecturas) {
 			if (lectura != 0) {
 				tamanio++;
-			}
-			else lecturasInvalidas++;
+			} else
+				lecturasInvalidas++;
 		}
 
 		lecturasValidas = new int[tamanio];
@@ -32,24 +32,23 @@ public class RegistroSismico {
 
 		return lecturasValidas;
 	}
-	
+
 	public int[] getLecturas() {
 		return this.lecturas;
 	}
-	
+
 	public int[] getLecturasValidas() {
 		return this.depurarLecturas();
 	}
-	
+
 	public int getCuantasLecturasInvalidas() {
 		return this.lecturasInvalidas;
 	}
-	
 
 	public static void main(String[] args) {
-		
-		int[] lecturas = {4, 0, 7, 0, 0, 3, 9, 0, 2, 6, 0, 1};
-		
+
+		int[] lecturas = { 4, 0, 7, 0, 0, 3, 9, 0, 2, 6, 0, 1 };
+
 		RegistroSismico rs = new RegistroSismico(lecturas);
 
 		System.out.println("Lecturas: " + Arrays.toString(rs.getLecturas()));
