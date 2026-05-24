@@ -21,12 +21,9 @@ public class Nombres {
 	}
 
 	public static void main(String[] args) {
-		String[] frutas = {
-			    "manzana", "banana", "naranja",
-			    "uva", "pera", "mango"
-			};
+		String[] frutas = { "manzana", "banana", "naranja", "uva", "pera", "mango" };
 		Nombres n = new Nombres(frutas);
-		
+
 		System.out.println(n.buscar("naranja"));
 		System.out.println(n.buscar("kiwi"));
 	}
