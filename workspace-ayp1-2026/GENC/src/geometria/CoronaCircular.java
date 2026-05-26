@@ -25,4 +25,6 @@ public class CoronaCircular {
 		return this.agujero.getPerimetro();
 	}
 
+	
+
 }
