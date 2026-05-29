@@ -49,7 +49,8 @@ public class Libreria {
 		int posAutor;
 		int cantTitulosDistintos = 0;
 		
-		//solucion con 2 vectores paralelos, uno para los autores y otro para los titulos distintos de ese autor
+		// solucion con 2 vectores paralelos, uno para los autores y otro para los titulos distintos de ese autor.
+		// perdón, pero mi cabeza necesita un map para resolver esto. 
 		for (Libro libro : libros) {
 			posAutor = buscarAutorEn(libro.getAutor(),autores, cantTitulosDistintos);
 			if(posAutor != -1) {

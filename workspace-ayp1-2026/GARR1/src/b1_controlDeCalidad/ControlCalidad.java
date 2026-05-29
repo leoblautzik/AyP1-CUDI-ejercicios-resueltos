@@ -13,8 +13,16 @@ Si más del 20% de las piezas son defectuosas, imprimí el mensaje "ALERTA: revi
  */
 
 public class ControlCalidad {
+	
+	private int[] pesos;
+	
+	
 
-	static boolean esDefectuosa(int peso) {
+	public ControlCalidad(int[] pesos) {
+		this.pesos = pesos;
+	}
+
+	public boolean esDefectuosa(int peso) {
 		return peso < 95 || peso > 105;
 	}
 
