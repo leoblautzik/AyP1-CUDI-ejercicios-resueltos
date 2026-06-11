@@ -5,6 +5,8 @@ public class FilaDeEscolares {
 	private int[] alturas;
 	
 	public FilaDeEscolares(int[] alturas) {
+		if(alturas == null || alturas.length == 0)
+			throw new Error("Entrada inválida");
 		this.alturas = alturas;
 	}
 	
@@ -62,7 +64,7 @@ public class FilaDeEscolares {
 		return mayorDifAltura;
 	}
 	
-	public int promedioDeLAsAlturas() {
+	public int promedioDeLasAlturas() {
 		int sumaAlturas = 0;
 		if(this.alturas.length == 0)
 			throw new Error("No hay alumnos");

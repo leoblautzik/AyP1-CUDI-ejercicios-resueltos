@@ -17,18 +17,15 @@ public class Temps {
 		double[][] temps = { 
 				{ 22.0, 18.5, 31.0, 27.3 }, 
 				{ 15.0, 29.0, 24.1, 20.8 }, 
-				{ 30.2, 33.0, 28.7, 25.5 }, 
-				{ 30.2, 33.0, 28.7, 5.5 },
-				{ 30.2, 33.0, 28.7, 25.5, -2.9, 0, 3.12 } 
-				
+				{ 30.2, 33.0, 28.7, 25.5 }								
 		};
 
 		System.out.println("Cantidad de filas: " + temps.length);
 		System.out.println("Cantidad de columnas: " + temps[0].length);
 		temps[0][3] = 99.9;
 		System.out.println(Arrays.deepToString(temps));
-		// System.out.println(temps[3][0]);
-
+		//System.out.println(temps[3][0]);
+		
 		temps[0][3] = 27.3;
 
 		System.out.println();
@@ -56,6 +53,7 @@ public class Temps {
 		
 		//7. Devolver un array con las temperaturas promedio de cada ciudad.
 		double[] tempPromedioPorCiudad = new double[temps.length];
+		
 		for (int i = 0; i < temps.length; i++) {
 			double sumaTemp = 0;
 			for (int j = 0; j < temps[i].length; j++) {

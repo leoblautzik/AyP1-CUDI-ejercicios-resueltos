@@ -9,8 +9,6 @@ Al finalizar este laboratorio serás capaz de:
 - Almacenar objetos en un arreglo.
 - Recorrer arreglos de objetos.
 - Buscar elementos.
-- Calcular máximos y mínimos.
-- Realizar conteos y acumulaciones.
 - Diseñar una clase que encapsule una colección.
 
 ### Consigna:
