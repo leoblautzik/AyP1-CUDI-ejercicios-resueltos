@@ -1,6 +1,26 @@
 package tarjetaBaja;
 
+import java.util.Objects;
+
 public class TarjetaBaja {
+	@Override
+	public int hashCode() {
+		return Objects.hash(saldo, viajesEnColectivo, viajesEnSubte);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TarjetaBaja other = (TarjetaBaja) obj;
+		return Double.doubleToLongBits(saldo) == Double.doubleToLongBits(other.saldo)
+				&& viajesEnColectivo == other.viajesEnColectivo && viajesEnSubte == other.viajesEnSubte;
+	}
+
 	private double saldo;
 	private int viajesEnColectivo;
 	private int viajesEnSubte;
