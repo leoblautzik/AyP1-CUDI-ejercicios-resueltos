@@ -1,5 +1,7 @@
 package geometria;
 
+import java.util.Objects;
+
 /*Implementar la clase Punto.
  * Un Punto en el plano posee coordenada X y coordenada Y. 
  * Proporcionar métodos para:
@@ -78,24 +80,35 @@ public class Punto {
 		return Math.hypot(this.x - otroPunto.x, this.y- otroPunto.y);
 		
 	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(x, y);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (this.getClass() != obj.getClass())
+			return false;
+		Punto other = (Punto) obj;
+		return Double.doubleToLongBits(this.x) == Double.doubleToLongBits(other.x)
+				&& Double.doubleToLongBits(this.y) == Double.doubleToLongBits(other.y);
+	}
+
 
 	public static void main(String[] args) {
 
 		Punto puntito;
 		puntito = new Punto(4, 6);
-		System.out.println(puntito);
-//		System.out.println(puntito.obtenerX());
-//		System.out.println(puntito.obtenerY());
-//		puntito.cambiarX(0);
-//		System.out.println(puntito.estaSobreEjeY());
-//		
-//		Punto p1 = new Punto(-1,-1);
-//		Punto p2 = new Punto(2,3);
-//		double distanciaP1P2;
-//		distanciaP1P2 = p1.distancia(p2);
-//		System.out.println(distanciaP1P2);
-//		System.out.println(p2.distancia(p1));
-//		System.out.println(p2.distancia(p2));
+		Punto otroPunto = new Punto(4,6);
+		
+		System.out.println(puntito == otroPunto);
+		System.out.println(puntito.equals(otroPunto));
 	}
+		
 
 }

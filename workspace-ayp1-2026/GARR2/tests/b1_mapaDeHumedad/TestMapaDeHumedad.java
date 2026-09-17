@@ -17,19 +17,17 @@ class TestMapaDeHumedad {
 	void humedadPromedioSinMuestrasTest() {
 		double[][] muestras = { { }, { }, { } };
 		MapaDeHumedad terreno = new MapaDeHumedad(muestras);
-		Error thrown = assertThrows(
+		assertThrows(
 	            Error.class,
 	            () -> terreno.humedadPromedio()
 	        );
-
 	}
 	@Test
 	void humedadPromedioMatrizNulaTest() {
 		double[][] muestras = null;
-		Error thrown = assertThrows(
+		assertThrows(
 	            Error.class,
 	            () -> new MapaDeHumedad(muestras)
 	        );
-
 	}
 }
